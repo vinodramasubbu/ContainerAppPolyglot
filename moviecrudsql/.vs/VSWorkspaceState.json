@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\.config",
+    "\\bin\\Release\\net5.0",
+    "\\Models",
+    "\\MovieList",
+    "\\obj",
+    "\\Properties",
+    "\\Properties\\PublishProfiles"
+  ],
+  "SelectedNode": "\\bin",
+  "PreviewInSolutionExplorer": false
+}

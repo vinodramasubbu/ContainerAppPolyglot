@@ -1,0 +1,10 @@
+- name: statestore
+  type: state.azure.blobstorage
+  version: v1
+  metadata:
+  - name: accountName
+    value: movieordersstorage
+  - name: accountKey
+    value: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  - name: containerName
+    value: order

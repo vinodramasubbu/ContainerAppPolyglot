@@ -1,0 +1,30 @@
+- name: statestore
+  type: state.azure.blobstorage
+  version: v1
+  metadata:
+  - name: accountName
+    value: movieordersstorage
+  - name: accountKey
+    value: xxxxxxxxxxxxxxxxxxxxxxxxx
+  - name: containerName
+    value: order
+- name: storagequeue
+  type: bindings.azure.storagequeues
+  version: v1
+  metadata:
+  - name: storageAccount
+    value: <AZURE_STORAGE_ACCOUNT>
+  - name: storageAccessKey
+    value: <AZURE_STORAGE_KEY>
+  - name: queue
+    value: <STORAGE_ACCOUNT_QUEUE>
+  - name: ttlInSeconds
+    value: 60
+  - name: decodeBase64
+    value: "true"
+- name: servicebusqueue
+  type: bindings.azure.storagequeues
+  version: v1
+  metadata:
+  - name: connectionString 
+    value: "Endpoint=sb://xxxxx.servicebus.windows.net/;SharedAccessKeyName=xxxx;SharedAccessKey=xxxx;EntityPath=orders

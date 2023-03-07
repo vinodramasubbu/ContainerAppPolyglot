@@ -1,0 +1,13 @@
+- name: storagequeue
+  type: bindings.azure.storagequeues
+  version: v1
+  metadata:
+  - name: storageAccount
+    value: movieordersstorage
+  - name: storageAccessKey
+    value: xxxxxxxxxxxxxxxxxxxxxxx
+  - name: queue
+    value: order
+  - name: decodeBase64
+    value: "false"
+    

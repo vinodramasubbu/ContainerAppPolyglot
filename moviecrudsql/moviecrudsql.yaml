@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: moviecrudsql
+  namespace: default
+  labels:
+    app: moviecrudsql
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: moviecrudsql
+  template:
+    metadata:
+      labels:
+        app: moviecrudsql
+      annotations:
+        dapr.io/enabled: "true"
+        dapr.io/app-id: "moviecrudsql"
+        dapr.io/app-port: "3602"
+    spec:
+      containers:
+      - name: moviecrudsql
+        image:  aksclustregistry1.azurecr.io/moviecrudsql:latest
+        ports:
+        - containerPort: 3602
+        imagePullPolicy: Always
